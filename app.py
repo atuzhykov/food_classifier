@@ -11,6 +11,7 @@ from food_clusterizator import pipeline
 # Only for HEROKU deployment due to daily erasing all filesystem
 import os.path
 if not os.path.isfile('model.pkl'):
+    url='https://raw.githubusercontent.com/atuzhykov/food_classifier/master/food_dataset.csv'
     pipeline(url)
 
 
