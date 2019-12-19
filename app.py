@@ -2,23 +2,25 @@ from flask_restful import Resource, Api, reqparse
 from flask import Flask, jsonify
 import datetime
 import myfitnesspal
-from scipy.special import expit
+from sklearn.externals import joblib
+from sklearn.cluster import KMeans
+import numpy as np
+from food_clusterizator import pipeline
+
+
+# Only for HEROKU deployment due to daily erasing all filesystem
+import os.path
+if not os.path.isfile('model.pkl'):
+    pipeline(url)
+
 
 
 def food_label_classifier(food_data:dict):
-    # very hardcoded model for labeling
-    w = 0.005
-    x = food_data['calories']
-    y = expit(w*x)
- 
-    result = {
-               y < 0.33: 'green',
-        0.33 <= y < 0.66: 'yellow',
-          0.66 <= y < 1:  'red',
-  
-    }[True]
+    labels = ["yellow","green","red"]
+    classifier = joblib.load('model.pkl')
+    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates'],food_data['calories']]).reshape(1, -1)
+    return labels[classifier.predict(X).tolist()[0]]
 
-    return result
      
 
 
