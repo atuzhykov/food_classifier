@@ -48,7 +48,7 @@ def food_label_classifier(food_data:dict):
 
 def last_day_food_extractor_formula(client):
     day_food_data = [ ]
-    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day-1)
+    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
     for meal in day.meals:
         for entry in meal:
             food_data = dict()
@@ -59,20 +59,7 @@ def last_day_food_extractor_formula(client):
 
     return day_food_data
 
-def last_day_food_extractor(client):
-    day_food_data = [ ]
-    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day-1)
-    for meal in day.meals:
-        for entry in meal:
-            print(entry)
-            food_data = dict()
-            food_data['name'] = entry.name
-            food_data['calories'] = entry.totals['calories']
-            food_data['label'] = food_label_classifier(entry.totals)
-            print(food_data['label'])
-            day_food_data.append(food_data)
-
-    return day_food_data
+de
 
 
 
