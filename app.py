@@ -6,20 +6,39 @@ from sklearn.externals import joblib
 from sklearn.cluster import KMeans
 import numpy as np
 from food_clusterizator import pipeline
+import math
+
 
 
 # Only for HEROKU deployment due to daily erasing all filesystem
-import os.path
-if not os.path.isfile('model.pkl'):
-    url='https://raw.githubusercontent.com/atuzhykov/food_classifier/master/food_dataset.csv'
-    pipeline(url)
+# import os.path
+# if not os.path.isfile('model.pkl'):
+#     url='https://raw.githubusercontent.com/atuzhykov/food_classifier/master/food_dataset.csv'
+#     pipeline(url)
 
+def food_index(food_data):
+    protein = food_data['protein']
+    fats = food_data['fat']
+    carbs = food_data['carbohydrates']
+    sugar = food_data['sugar']
+    calories = food_data['calories']
+    sodium = food_data['sodium']
+    w =[0.1, 0.17, 0.29]
+    index =  w[0]*carbs + w[1]*fats + w[2]*protein + abs(calories*0.1 - sugar) + math.exp(0.0001*sodium)
+    
+    label = {
+               index < 10: 'green',
+        10 <= index < 20:   'yellow',
+          20 <= index:  'red',
+     
+    }[True]
 
+    return label
 
 def food_label_classifier(food_data:dict):
-    labels = ["yellow","green","red"]
-    classifier = joblib.load('model.pkl')
-    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates'],food_data['calories']]).reshape(1, -1)
+    labels = ["green","yellow","red"]
+    classifier = joblib.load('lrmodel.pkl')
+    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates'],food_data['sugar'],food_data['calories'],food_data['sodium']]).reshape(1, -1)
     return labels[classifier.predict(X).tolist()[0]]
 
      
@@ -33,7 +52,7 @@ def last_day_food_extractor(client):
             food_data = dict()
             food_data['name'] = entry.name
             food_data['calories'] = entry.totals['calories']
-            food_data['label'] = food_label_classifier(entry.totals)
+            food_data['label'] = food_index(entry.totals)
             day_food_data.append(food_data)
 
     return day_food_data
