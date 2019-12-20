@@ -23,13 +23,13 @@ def food_index(food_data):
     sugar = food_data['sugar']
     calories = food_data['calories']
     sodium = food_data['sodium']
-    w =[0.1, 0.17, 0.29]
+    w =[0.4, 0.2, 0.1 ]
     index =  w[0]*carbs + w[1]*fats + w[2]*protein + abs(calories*0.1 - sugar) + math.exp(0.0001*sodium)
     
     label = {
-               index < 10: 'green',
-        10 <= index < 20:   'yellow',
-          20 <= index:  'red',
+               index < 9: 'green',
+        9 <= index < 25:   'yellow',
+          25 <= index:  'red',
      
     }[True]
 
@@ -38,21 +38,38 @@ def food_index(food_data):
 def food_label_classifier(food_data:dict):
     labels = ["green","yellow","red"]
     classifier = joblib.load('lrmodel.pkl')
-    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates'],food_data['sugar'],food_data['calories'],food_data['sodium']]).reshape(1, -1)
+    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates']]).reshape(1, -1)
+    print(X)
+    
     return labels[classifier.predict(X).tolist()[0]]
 
      
 
 
-def last_day_food_extractor(client):
+def last_day_food_extractor_formula(client):
     day_food_data = [ ]
-    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
+    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day-1)
     for meal in day.meals:
         for entry in meal:
             food_data = dict()
             food_data['name'] = entry.name
             food_data['calories'] = entry.totals['calories']
             food_data['label'] = food_index(entry.totals)
+            day_food_data.append(food_data)
+
+    return day_food_data
+
+def last_day_food_extractor(client):
+    day_food_data = [ ]
+    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day-1)
+    for meal in day.meals:
+        for entry in meal:
+            print(entry)
+            food_data = dict()
+            food_data['name'] = entry.name
+            food_data['calories'] = entry.totals['calories']
+            food_data['label'] = food_label_classifier(entry.totals)
+            print(food_data['label'])
             day_food_data.append(food_data)
 
     return day_food_data
@@ -69,18 +86,18 @@ parser.add_argument('email', type=str)
 parser.add_argument('password', type=str)
 
 
-
 class FoodClassifier(Resource):
     def post(self):
         args = parser.parse_args()
         email = args['email']
         password = args['password']
         client = myfitnesspal.Client(username=email, password=password)
-        result = last_day_food_extractor(client)
+        result = last_day_food_extractor_formula(client)
         
         return jsonify(result)
 
 api.add_resource(FoodClassifier, '/foodclassifier') 
+
 
 
 if __name__ == '__main__':
