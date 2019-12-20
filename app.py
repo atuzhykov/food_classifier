@@ -59,10 +59,6 @@ def last_day_food_extractor_formula(client):
 
     return day_food_data
 
-de
-
-
-
 
 
 app = Flask(__name__)
