@@ -65,6 +65,3 @@
 (cookies,2)
 (pancakes,1)
 (eggplant,0)
-
-
-

@@ -9,13 +9,6 @@ import math
 from food_ml import pipeline
 
 
-
-# Only for HEROKU deployment due to daily erasing all filesystem
-# import os.path
-# if not os.path.isfile('model.pkl'):
-#     url='https://raw.githubusercontent.com/atuzhykov/food_classifier/master/food_dataset.csv'
-#     pipeline(url)
-
 def food_index(food_data):
     protein = food_data['protein']
     fats = food_data['fat']
@@ -37,7 +30,7 @@ def food_index(food_data):
 
 def food_label_classifier(food_data:dict, algo = 'rf'):
     labels = ["green","yellow","red"]
-    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates'],food_data['sugar'],food_data['calories']]).reshape(1, -1)
+    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates'],food_data['sugar'],food_data['sodium'],food_data['calories']]).reshape(1, -1)
 
     if algo == 'lr':
         classifier = joblib.load('LogisticRegression.pkl')
@@ -69,7 +62,7 @@ def meta_classifier(food_data):
      
 
 
-def last_day_food_extractor_formula(client):
+def last_day_food_extractor(client):
     day_food_data = [ ]
     day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
     for meal in day.meals:
@@ -98,14 +91,16 @@ class FoodClassifier(Resource):
         email = args['email']
         password = args['password']
         client = myfitnesspal.Client(username=email, password=password)
-        result = last_day_food_extractor_formula(client)
+        result = last_day_food_extractor(client)
         
         return jsonify(result)
 
 api.add_resource(FoodClassifier, '/foodclassifier') 
 
-url = 'https://raw.githubusercontent.com/atuzhykov/food_classifier/master/MFP_scrapped_food.csv'
-pipeline(url)
+
+# Only for HEROKU deployment due to daily erasing all filesystem
+# url = 'https://raw.githubusercontent.com/atuzhykov/food_classifier/master/MFP_scrapped_food.csv'
+# pipeline(url)
 
 if __name__ == '__main__':
     app.run()

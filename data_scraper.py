@@ -17,7 +17,7 @@ dataset = []
 for item in content:
     nitem  = list(map(str, item.replace('(','').replace(')','').split(',')))
     food_items = client.get_food_search_results(nitem[0])
-    time.sleep(20)
+    time.sleep(150)
     print(nitem[0])
 
     for mfpids in food_items:
@@ -28,6 +28,7 @@ for item in content:
         food_data['fat'] = meal.fat
         food_data['carbohydrates']= meal.carbohydrates
         food_data['sugar']= meal.sugar
+        food_data['sodium']= meal.sodium
         food_data['calories'] = meal.calories
         food_data['class'] = nitem[1]
         dataset.append(food_data)
