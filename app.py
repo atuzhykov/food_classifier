@@ -6,6 +6,7 @@ from sklearn.externals import joblib
 import collections
 import numpy as np
 import math
+from food_ml import pipeline
 
 
 
@@ -103,7 +104,8 @@ class FoodClassifier(Resource):
 
 api.add_resource(FoodClassifier, '/foodclassifier') 
 
-
+url = 'https://raw.githubusercontent.com/atuzhykov/food_classifier/master/MFP_scrapped_food.csv'
+pipeline(url)
 
 if __name__ == '__main__':
     app.run()
