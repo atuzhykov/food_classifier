@@ -3,6 +3,7 @@ import myfitnesspal
 import pandas as pd
 import time
 
+
 email = 'anarchypunk@ukr.net'
 password = 't*u4C8iWAB5Trn9'
 client = myfitnesspal.Client(username=email, password=password)
@@ -14,8 +15,10 @@ content = [x.strip() for x in content]
 
 dataset = []
 for item in content:
-    food_items = client.get_food_search_results(item)
-    time.sleep(5)
+    nitem  = list(map(str, item.replace('(','').replace(')','').split(',')))
+    food_items = client.get_food_search_results(nitem[0])
+    time.sleep(20)
+    print(nitem[0])
 
     for mfpids in food_items:
         food_data = dict()
@@ -26,12 +29,9 @@ for item in content:
         food_data['carbohydrates']= meal.carbohydrates
         food_data['sugar']= meal.sugar
         food_data['calories'] = meal.calories
-        food_data['sodium'] = meal.sodium
+        food_data['class'] = nitem[1]
         dataset.append(food_data)
         df = pd.DataFrame(dataset)
         df.to_csv('MFP_scrapped_food.csv')
-        print(food_data)
 
-# item = client.get_food_item_details(mpfid)
-# print(item.sugar)
 

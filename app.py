@@ -3,9 +3,8 @@ from flask import Flask, jsonify
 import datetime
 import myfitnesspal
 from sklearn.externals import joblib
-from sklearn.cluster import KMeans
+import collections
 import numpy as np
-from food_clusterizator import pipeline
 import math
 
 
@@ -35,13 +34,36 @@ def food_index(food_data):
 
     return label
 
-def food_label_classifier(food_data:dict):
+def food_label_classifier(food_data:dict, algo = 'rf'):
     labels = ["green","yellow","red"]
-    classifier = joblib.load('lrmodel.pkl')
-    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates']]).reshape(1, -1)
-    print(X)
+    X = np.array([food_data['protein'],food_data['fat'],food_data['carbohydrates'],food_data['sugar'],food_data['calories']]).reshape(1, -1)
+
+    if algo == 'lr':
+        classifier = joblib.load('LogisticRegression.pkl')
+        return labels[classifier.predict(X).tolist()[0]]
     
-    return labels[classifier.predict(X).tolist()[0]]
+    elif algo == 'gb':
+        classifier = joblib.load('GradientBoostingRegressor.pkl')
+        return labels[round(classifier.predict(X).tolist()[0])]
+
+    elif algo == 'rf':
+        classifier = joblib.load('RandomForestClassifier.pkl')
+        return labels[classifier.predict(X).tolist()[0]]
+
+    elif algo == 'ab':
+        classifier = joblib.load('AdaBoostClassifier.pkl')
+        return labels[classifier.predict(X).tolist()[0]]
+
+def meta_classifier(food_data):
+    algos = ['rf','ab','lr','gb']
+    decisions = []
+    for algo in algos:
+        decisions.append(food_label_classifier(food_data,algo=algo))
+    decisions.append(food_index(food_data))
+    return collections.Counter(decisions).most_common(1)[0][0]
+    
+
+ 
 
      
 
@@ -54,7 +76,7 @@ def last_day_food_extractor_formula(client):
             food_data = dict()
             food_data['name'] = entry.name
             food_data['calories'] = entry.totals['calories']
-            food_data['label'] = food_index(entry.totals)
+            food_data['label'] = meta_classifier(entry.totals)
             day_food_data.append(food_data)
 
     return day_food_data
@@ -84,4 +106,4 @@ api.add_resource(FoodClassifier, '/foodclassifier')
 
 
 if __name__ == '__main__':
-     app.run()
+    app.run()

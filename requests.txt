@@ -1,42 +1,70 @@
-apple
-beer
-bacon
-beans
-bread
-broccoli
-Cabbage
-cake
-carrots
-celery
-cheese
-chicken
-chips
-chocolate
-coffee
-cookies
-corn
-dumplings
-donuts
-eggs
-muffins
-falafel
-toast
-ham
-hamburger 
-honey
-hot dogs
-hummus
-Meatballs
-Moose
-Noodles
-Pizza
-Pepperoni
-Pancakes
-Spaghetti
-Toast
-Waffles
-Wine
-Yogurt
-Zucchini
-Pepsi
+(apple,0)
+(banana,0)
+(fried eggs,1)
+(boiled eggs,0)
+(burger,2)
+(green salad,1)
+(fried potato,2)
+(boiled potato,1)
+(avocado,0)
+(beer,2)
+(pepsi,2)
+(wine,2)
+(whiskey,2)
+(vodka,2)
+(porridge,0)
+(champaigne,2)
+(rice,0)
+(pasta,1)
+(chocolate,2)
+(bread,1)
+(toast,1)
+(milk,0)
+(orange,0)
+(broccoli,0)
+(chips,2)
+(donut,2)
+(cabbage,0)
+(yogurt,1)
+(cake,1)
+(pumpkin,0)
+(strawberry,0)
+(marshmallow,2)
+(coffee,1)
+(nuts,0)
+(beans,1)
+(corn,1)
+(carrot,0)
+(watermelon,1)
+(cherry,0)
+(pie,2)
+(sushi,1)
+(fish,1)
+(tuna,1)
+(nugets,2)
+(cola,2)
+(cucumber,0)
+(mashroom,1)
+(hooney,0)
+(grapess,0)
+(beef,1)
+(fried chiken,2)
+(boiled chiken,1)
+(spaghetti,1)
+(sweet waffle,2)
+(juice,1)
+(tea,0)
+(sausage,2)
+(ice cream,2)
+(soup,1)
+(kiwi,0)
+(cheese,1)
+(milk,0)
+(tomatos,0)
+(pork,2)
+(cookies,2)
+(pancakes,1)
+(eggplant,0)
+
+
 
