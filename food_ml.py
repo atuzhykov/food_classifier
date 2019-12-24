@@ -14,7 +14,7 @@ def pipeline(url):
     labels = df.drop('class',1).to_numpy()
     target = df['class']
 
-    models = [  LogisticRegression(penalty='l2',C=0.1), 
+    models = [  LogisticRegression(penalty='l2',C=0.1,max_iter=1000), 
                 RandomForestClassifier(n_estimators=100),
                 GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=1, random_state=0, loss='ls'),
                 AdaBoostClassifier(n_estimators=100) ]

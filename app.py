@@ -110,6 +110,7 @@ class FoodClassifier(Resource):
         os.environ['email'] = email
         os.environ['password'] = password
         client = myfitnesspal.Client(username=email, password=password)
+        print('logged as {}'.format(email))
         result = last_day_food_extractor(client)
         
         return jsonify(result)
