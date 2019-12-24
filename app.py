@@ -40,10 +40,11 @@ def food_label_classifier(food_data:dict, algo = 'rf'):
     features = ['protein','fat','carbohydrates','sugar','sodium','calories']
     for feature in features:
         if feature not in food_data:
-            client = myfitnesspal.Client(username=os.environ.get('email'), password=os.environ.get('password'))
-            food_item = client.get_food_search_results(food_name)[0]
-            meal = client.get_food_item_details(food_item.mfp_id)
-            food_data[feature] = getattr(meal, feature)
+            food_data[feature] = 0
+            # client = myfitnesspal.Client(username=os.environ.get('email'), password=os.environ.get('password'))
+            # food_item = client.get_food_search_results(food_name)[0]
+            # meal = client.get_food_item_details(food_item.mfp_id)
+            # food_data[feature] = getattr(meal, feature)
 
 
 
