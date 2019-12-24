@@ -24,4 +24,3 @@ def pipeline(url):
         joblib.dump(model, '{}.pkl'.format(type(model).__name__)) 
 
 
-pipeline('MFP_scrapped_food_without_names.csv')

@@ -62,27 +62,12 @@ def meta_classifier(food_data):
      
 
 
-def last_day_food_extractor(client):
-    day_food_data = [ ]
-    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
-    for meal in day.meals:
-        for entry in meal:
-            food_data = dict()
-            food_data['name'] = entry.name
-            food_data['calories'] = entry.totals['calories']
-            food_data['label'] = meta_classifier(entry.totals)
-            day_food_data.append(food_data)
-
-    return day_food_data
-
-
-
 app = Flask(__name__)
 api = Api(app)
 
 parser = reqparse.RequestParser()
-parser.add_argument('email', type=str)
-parser.add_argument('password', type=str)
+parser.add_argument('email')
+parser.add_argument('password')
 
 
 class FoodClassifier(Resource):
@@ -91,16 +76,24 @@ class FoodClassifier(Resource):
         email = args['email']
         password = args['password']
         client = myfitnesspal.Client(username=email, password=password)
-        result = last_day_food_extractor(client)
+        day_food_data = [ ]
+        day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
+        for meal in day.meals:
+            for entry in meal:
+                food_data = dict()
+                food_data['name'] = entry.name
+                food_data['calories'] = entry.totals['calories']
+                food_data['label'] = meta_classifier(entry.totals)
+                day_food_data.append(food_data)
         
-        return jsonify(result)
+        return jsonify(day_food_data)
 
 api.add_resource(FoodClassifier, '/foodclassifier') 
 
 
 # Only for HEROKU deployment due to daily erasing all filesystem
-# url = 'https://raw.githubusercontent.com/atuzhykov/food_classifier/master/MFP_scrapped_food.csv'
-# pipeline(url)
+url = 'https://raw.githubusercontent.com/atuzhykov/food_classifier/master/MFP_scrapped_food_without_names.csv'
+pipeline(url)
 
 if __name__ == '__main__':
     app.run()
