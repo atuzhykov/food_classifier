@@ -109,11 +109,14 @@ def last_day_food_extractor(client):
     day_food_data = [ ]
     day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
     for meal in day.meals:
+        food_type = meal.name 
         for entry in meal:
             food_data = dict()
             food_data['name'] = entry.name
+            food_data['type'] = food_type
             food_data['calories'] = entry.totals['calories']
             food_data['label'] = meta_classifier(entry)
+            food_data['day'] = datetime.datetime.now().strftime("%d/%m/%Y")
             day_food_data.append(food_data)
 
     return day_food_data
@@ -126,6 +129,7 @@ api = Api(app)
 parser = reqparse.RequestParser()
 parser.add_argument('email', type=str)
 parser.add_argument('password', type=str)
+# parser.add_argument('date', type=str)
 
 
 class FoodClassifier(Resource):
@@ -133,8 +137,7 @@ class FoodClassifier(Resource):
         args = parser.parse_args()
         email = args['email'].strip()
         password = args['password'].strip()
-        # os.environ['email'] = email
-        # os.environ['password'] = password
+        # date = datetime.datetime.strptime(args['date'], '%Y-%m-%d')
         client = myfitnesspal.Client(username=email, password=password)
         print('logged as {}'.format(email))
         result = last_day_food_extractor(client)
