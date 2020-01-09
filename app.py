@@ -105,9 +105,9 @@ def meta_classifier(food_data):
      
 
 
-def last_day_food_extractor(client):
+def food_extractor(client, date):
     day_food_data = [ ]
-    day = client.get_date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
+    day = client.get_date(date.year, date.month, date.day)
     for meal in day.meals:
         food_type = meal.name 
         for entry in meal:
@@ -129,7 +129,7 @@ api = Api(app)
 parser = reqparse.RequestParser()
 parser.add_argument('email', type=str)
 parser.add_argument('password', type=str)
-# parser.add_argument('date', type=str)
+parser.add_argument('date', type=str)
 
 
 class FoodClassifier(Resource):
@@ -137,10 +137,10 @@ class FoodClassifier(Resource):
         args = parser.parse_args()
         email = args['email'].strip()
         password = args['password'].strip()
-        # date = datetime.datetime.strptime(args['date'], '%Y-%m-%d')
+        date = datetime.datetime.strptime(args['date'], '%Y-%m-%d')
         client = myfitnesspal.Client(username=email, password=password)
         print('logged as {}'.format(email))
-        result = last_day_food_extractor(client)
+        result = food_extractor(client,date)
         
         return jsonify(result)
 
