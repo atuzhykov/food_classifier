@@ -116,7 +116,7 @@ def food_extractor(client, date):
             food_data['type'] = food_type
             food_data['calories'] = entry.totals['calories']
             food_data['label'] = meta_classifier(entry)
-            food_data['day'] = datetime.datetime.now().strftime("%d/%m/%Y")
+            food_data['day'] = date.strftime("%d/%m/%Y")
             day_food_data.append(food_data)
 
     return day_food_data
