@@ -96,8 +96,8 @@ def meta_classifier(food_data):
     decisions = []
     for algo in algos:
         decisions.append(food_label_classifier(X,algo=algo))
-    
-    return collections.Counter(decisions).most_common(1)[0][0]
+    # return tuple of vector and prediction label
+    return (X,collections.Counter(decisions).most_common(1)[0][0])
     
 
  
@@ -107,6 +107,7 @@ def meta_classifier(food_data):
 
 def food_extractor(client, date):
     day_food_data = [ ]
+    generalized_meal = np.zeros(6)
     day = client.get_date(date.year, date.month, date.day)
     for meal in day.meals:
         food_type = meal.name 
@@ -115,10 +116,27 @@ def food_extractor(client, date):
             food_data['name'] = entry.name
             food_data['type'] = food_type
             food_data['calories'] = entry.totals['calories']
-            food_data['label'] = meta_classifier(entry)
+            food_data['label'] = meta_classifier(entry)[1]
             food_data['day'] = date.strftime("%d/%m/%Y")
             day_food_data.append(food_data)
+            
+            # getting vector (thats nedeed in case it was restored)
+            X = meta_classifier(entry)[0]
+            for idx, j in np.ndenumerate(generalized_meal):
+                generalized_meal[idx] += X[0][idx]
+ 
+           
+            
 
+    if day_food_data:
+        generalized_meal = np.divide(generalized_meal,len(food_data)).reshape(1, -1)
+        algos = ['rf','ab','lr','gb','formula']
+        decisions = []
+        for algo in algos:
+            decisions.append(food_label_classifier(X,algo=algo))
+        day_food_data.append({'daylabel': collections.Counter(decisions).most_common(1)[0][0]})
+
+    
     return day_food_data
 
 
