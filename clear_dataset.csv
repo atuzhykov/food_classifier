@@ -1,0 +1,696 @@
+,category,text,rank
+0,water,32 oz,3
+1,sleep,4 hrs,1
+2,workout,Nope - Wednesday day off,1
+3,food,No value,Can't rate
+4,stress,No value,1
+5,food,No value,4
+6,food,No value,Can't rate
+7,food,No value,1
+8,sleep,5.5,1
+9,stress,stress free,4
+10,food,not enough,3
+11,food,no food,1
+12,workout,yes,4
+13,water,1 gallon,4
+14,food,almost perfect,3
+14,food,perfect,4
+15,water,zero,1
+16,water,a lot,4
+17,sleep,3 hrs,1
+18,stress,handled,2
+19,stress,handled,1
+20,stress,too much to handle,3
+21,stress,in and out,3
+22,food,on point,4
+23,food,on point,4
+24,food,on point,4
+25,food,Cheated,3
+26,food,,1
+27,stress,alot on mind,2
+28,food,4.  very healthy,4
+29,sleep,7 hrs,3
+30,food,shitty,1
+31,food,No value,2
+32,workout,work out,4
+33,stress,Handled what was thrown,3
+34,workout,workout,4
+35,stress,Handled what was thrown,3
+36,stress,Handled what was thrown,3
+37,stress,stressed out.  Im a mess,1
+38,stress,Handled what was thrown,3
+39,stress,Overwhelmed,2
+40,stress,Handled what was thrown,3
+41,workout,No value,4
+42,food,on point,1
+43,stress,handled,3
+44,food,no food,1
+45,workout,good workout,4
+46,workout,great workout,4
+47,stress,handled what was thrown,3
+48,stress,Handled what was thrown,3
+49,stress,Handled what was thrown,3
+50,stress,Handled what was thrown,3
+51,stress,Handled what was thrown,3
+52,food,ate pretty healthy,3
+53,workout,Great. Boost.,4
+54,stress,Handled what was thrown,3
+55,water,64,4
+56,food,Not even close,1
+57,workout,Great workout ,4
+58,food,Food so-so,2
+59,workout,Great,4
+60,stress,Handled what was thrown,3
+61,workout,Good workout,4
+62,stress,Handled what was thrown,3
+63,stress,Handled what was thrown,3
+64,water,a lot of water,4
+65,workout,10 minute ab workout,2
+66,food,so-so,2
+67,workout,brutal,4
+68,stress,Handled what was thrown,3
+69,food,not great,2
+70,food,just ok,2
+71,workout,Great,4
+72,stress,Handled what was thrown,3
+73,sleep,6,2
+74,sleep,less than 5,1
+75,food,ate well,4
+76,workout,yea,1
+77,stress,hard day,3
+78,sleep,almost 7,2
+79,sleep,almost 7,3
+80,stress,Handled what was thrown,3
+81,food,almost perfect,3
+82,sleep,8.5 whoop whoop,4
+83,water,low on water,2
+84,water,drinking lots of water,4
+85,water,32,3
+86,workout,yes,4
+87,workout,great,4
+88,stress,Handled what was thrown,3
+89,workout,good workout ,3
+90,stress,not as stressful,3
+91,workout,Great,4
+92,food,not great,2
+93,workout,yes,4
+94,sleep,7,4
+95,workout,yes,4
+96,workout,2 mile walk,4
+97,stress,handled,3
+98,water,112,4
+99,food,not good ugh!!!,1
+100,workout,yeah,4
+101,workout,no,1
+102,water,dehydrated,2
+102,water,few sips,2  
+103,workout,yes,4
+104,food,very healthy,4
+105,water,32,3
+106,stress,busy but positive,2
+107,workout,yes,4
+108,workout,peloton,4
+109,food,healthy,4
+110,stress,could be better,3
+111,workout,yes x2,4
+112,food,shitty,2
+113,stress,busy,2
+114,water,none,1
+115,workout,no,1
+116,water,32,2
+117,water,no,1
+118,food,shitty,1
+119,food,cheated,3
+120,water,80,4
+121,workout,no,1
+122,workout,no,1
+123,water,not yet,1
+124,workout,not yet,1
+125,workout,no,1
+126,stress,Handled what was thrown at me,3
+127,sleep,less than 5,1
+128,sleep,7+,3
+129,sleep,7.5,3
+130,food,not good,1
+131,workout,yes,1
+132,sleep,5,1
+133,workout,yes,4
+134,sleep,5,1
+135,workout,yes,1
+136,sleep,5,1
+137,workout,yes,1
+138,workout,yes,4
+139,food,"eggs with veggies, turkey bacon, avocado",4
+140,workout,yes,1
+141,water,gallon,4
+142,workout,resting,1
+143,water,32,3
+144,workout,Pretty good,3
+145,stress,Handled what was thrown,3
+146,stress,Handled what was thrown,3
+147,water,Gallon,4
+148,water,Half gallon,4
+149,water,gallon,4
+150,water,gallon,4
+151,stress,Handled what was thrown,3
+152,stress,Lots of stress,2
+153,workout,Great,4
+154,workout,Didn’t workout,1
+155,workout,Awesome workout,4
+156,food, have not been awesome,3
+157,stress,Handled what was thrown,3
+158,workout,good,4
+159,sleep,8,4
+160,workout,yes,4
+161,workout,good,4
+162,workout,no.,1
+163,workout,no  ,1
+164,workout,good,4
+165,workout,yes,4
+166,workout,didn't workout,1
+167,sleep,6,2
+168,stress,hamdled,3
+169,food,pretty well,3
+170,food,not good,1
+171,sleep,5.5,1
+172,workout,yes,4
+173,sleep,5 ,1
+174,workout,amazing,4
+175,sleep,5 ,1
+176,water,dehydrated,1
+177,workout,no  ,1
+178,food,cheated,3
+179,water,32,3
+180,workout,yes,4
+181,food,healthy,4
+182,water,32,3
+183,stress,could be better,3
+184,food,very healthy,4
+185,sleep,8,4
+186,food,healthy,4
+187,stress,could be better,3
+188,food,shitty,1
+189,food,healthy,4
+190,water,32,3
+191,food,could be better,3
+192,workout,didn't work out,1
+193,food,very healthy,4
+194,workout,didn't workout,1
+195,water,48,3
+196,workout,didn't workout,1
+197,stress,handled,3
+198,workout,good workout,4
+199,sleep,less than 5,1
+200,workout,no,1
+201,sleep,less than 5,1
+202,workout,didn't workout,1
+203,workout,didn't workout,1
+204,workout,didn't workout,1
+205,workout,didn't workout,1
+206,workout,didn't workout,1
+207,water,112,4
+208,water,I 112,4
+209,workout,good,4
+210,stress,handled,3
+211,sleep,seven,3
+212,workout,didn't workout,1
+213,stress,fine,4
+214,workout,great,4
+215,water,60,4
+216,workout,Didn't workout,1
+217,stress,Handled what was thrown,3
+218,stress,Handled what was thrown,3
+219,stress,Handled,3
+220,workout,Didn't workout,1
+221,food,good,1
+222,food,good,1
+223,stress,Handled what was thrown,3
+224,workout,good workout,4
+225,workout,Didn't workout,1
+226,workout,Didn't workout,1
+227,workout,Didn't workout yet,2
+228,food,Barely ate,1
+229,workout,didn't,1
+230,food,shit,3
+231,stress,busy,2
+232,workout,didn't,1
+233,water,32,3
+234,workout,didn't,1
+235,food,healthy,4
+236,water,32,3
+237,workout,great workout,4
+238,workout,great,4
+239,sleep,8,4
+240,sleep,7,3
+241,food,not good,1
+242,stress,handled,3
+243,workout,didn't workout ,1
+244,workout,was good,4
+245,workout,did t workout,1
+246,stress,handled,3
+247,sleep,7.5,3
+248,workout,didn't workout,1
+249,workout,didn't workout,1
+250,food,just ok,2
+251,stress,handled,3
+252,workout,didn't workout,1
+253,workout,day off,1
+254,workout,good workout,4
+255,workout,good workout,4
+256,workout,good easy workout,4
+257,food,crap,1
+258,water,half gallon,4
+259,workout,great,4
+260,stress,Handled what was thrown,3
+261,stress,Handled it,3
+262,workout,Didn't workout,1
+263,water,gallon,4
+264,workout,good workout,4
+265,workout,Good workout,4
+266,food,Need to step up,2
+267,stress,Handled what was thrown,3
+268,workout,Didn't workout,1
+269,workout,Didn't workout,1
+270,food,not good,1
+271,water,Dehydrated for sure,1
+272,workout,Didn't workout,1
+273,stress,Handled it,3
+274,water,More like 32oz,3
+275,workout,Didn't workout,1
+276,workout,Didn't workout,1
+277,stress,Handled what was thrown,3
+278,workout,Great workout,4
+279,stress,Handled what was thrown,3
+280,workout,Didn't workout,1
+281,food,Not good,1
+282,sleep,7+,3
+283,workout,didnt workout,1
+284,sleep,6,2
+285,stress,handling,3
+286,water,so much,4
+287,water,all the water,4
+288,workout,didn't workout,1
+289,workout,didn't workout,1
+290,food,not good,1
+291,workout,good workout,4
+292,food,on track,4
+293,workout,good workout,4
+294,food,on track,4
+295,workout,not working out today,1
+296,stress,handling it,2
+297,food,chicken and veggies,4
+298,workout,Didn't workout yet,1
+299,food,need to stepnup,2
+300,stress,handled,2
+301,sleep,8,4
+302,water,gallon,4
+303,water,gallon,4
+304,workout,great,4
+305,workout,woo that was a good one,4
+306,workout,working out,4
+307,workout,3 mile run,4
+308,sleep,7,3
+309,workout,well its over,4
+310,sleep,7 plus,3
+311,stress,handled,3
+312,workout,it was great,4
+313,workout,fine,4
+314,water,60,4
+315,workout,worked out hard,4
+316,sleep,8,4
+317,workout,off day,1
+318,sleep,8.5,4
+319,food,incredible,4
+320,workout,workout was good,4
+321,workout,didn't,1
+322,food,awful,1
+323,workout,workout good,4
+324,sleep,6,2
+325,workout,didn't,1
+326,workout,didn't,1
+327,workout,had a good workout,4
+328,workout,good workout,4
+329,stress,handled,3
+330,workout,walking three terminals,3
+331,sleep,8,4
+332,water,32,3
+333,workout,good,4
+334,food,heskthy,4
+335,water,32,3
+336,workout,didnt,1
+337,sleep,8,4
+338,food,very healthy 4,4
+339,water,32,3
+340,stress,busy but positive,2
+341,food,healthy,4
+342,water,32,3
+343,food,very healthy 4,4
+344,water,,3
+345,workout,didnt,1
+346,workout,Working out felt good,4
+347,workout,Great workout,4
+348,stress,Handled what was thrown,3
+349,stress,Handled what was thrown,3
+350,stress,Handled what was thrown,3
+351,workout,Great workout,4
+352,stress,Handled what was thrown,3
+353,workout,good,4
+354,water,gallons,4
+355,sleep,6,2
+356,workout,didn't workout,1
+357,stress,close to overwhelming,2
+358,workout,Didn't workout,1
+359,stress,Handled it,3
+360,workout,Didn't workout,1
+361,workout,Didn't workout,1
+362,workout,Didn't workout,1
+363,water,drank alot,4
+364,water,drank a lot today,4
+365,workout,yoga,4
+366,workout,didnt workout,1
+367,stress,bad,1
+368,workout,didnt workout,1
+369,stress,bad,1
+370,food,i need to eat more,1
+371,stress,heavy,1
+372,workout,100 pushups,4
+373,sleep,5,1
+374,food,ok,3
+375,stress,more than usual,2
+376,workout,didnt,1
+377,water,32,3
+378,workout,good workout,4
+379,stress,Stress Free,4
+380,food,cheated,3
+381,stress,busy but positive,3
+382,sleep,0,1
+383,workout,Good workout ,4
+384,stress,stress was high,1
+385,stress,Handled what was thrown,3
+386,workout,didn't work out,1
+387,food,NOT GOOD,1
+388,workout,good,4
+389,workout,good,4
+390,workout,Great,4
+391,stress,Handled what was thrown,3
+391,stress,shut down,3
+392,food,Need to Step Up,2
+393,stress,Handled what was thrown,3
+394,stress,Handled what was thrown,3
+395,workout,Didn't workout,1
+396,sleep,7,1
+397,stress,handled,3
+398,water,plenty of water,4
+399,sleep,6,2
+400,stress,derailed,2
+401,food,great,4
+402,sleep,7.5,3
+403,workout,it was good,4
+404,workout,very good,4
+405,food,on point so far,1
+406,workout,it was good,4
+407,stress,a little stressed,2
+408,stress,not the best,2
+409,workout,good workout!,4
+410,workout,didn't workout today,1
+411,workout,Good workout,4
+412,workout,didn't workout,1
+413,workout,didnt workout,1
+414,sleep,6,1
+415,sleep,less than 5,1
+416,workout,workout was good,4
+417,workout,didn't workout,1
+418,food,on point,4
+419,water,96,4
+420,water,gallon,4
+421,water,60,4
+422,stress,handled,3
+423,workout,good workout,4
+424,water,32,3
+425,sleep,8+,4
+426,workout,didn't workout yet,1
+427,stress,handled,3
+428,workout,6,2
+429,sleep,7,3
+430,workout,bad,1
+431,workout,Didn't workout,1
+432,sleep,7,3
+433,workout,good workout,4
+434,stress,Handled what was thrown,3
+435,stress,Handled what was thrown,3
+436,stress,Handled what was thrown,3
+437,weight,169,4
+438,sleep,8,4
+439,workout,Great workout,4
+440,water,32,3
+441,water,64,4
+442,water,64,4
+443,water,96,4
+444,water,96,4
+445,water,32,3
+446,water,64,4
+447,food,no..... food is shot today!,1
+448,water,32,3
+449,workout,workout was good,4
+450,workout,Workout was good,4
+451,sleep,8,4
+452,water,96,4
+453,water,32oz,3
+454,water,64oz,4
+455,workout,Workout was good,4
+456,water,96oz,4
+457,water,96oz,4
+458,workout,Workout was lonely but good,4
+459,water,96oz,4
+460,workout,Didn't workout,1
+461,water,64oz ,4
+462,water,64oz,4
+463,water,112,4
+464,water,32oz,4
+465,water,64oz,4
+466,water,64oz,4
+467,water,32oz,3
+468,water,64 oz,4
+469,water,96oz,4
+470,water,112,4
+471,water,112oz,4
+472,water,64oz,4
+473,workout,Good,4
+474,water,64oz,4
+475,water,64oz,4
+476,water,64 oz,4
+477,water,64oz,4
+478,workout,Didn't workout,1
+479,water,32oz,3
+480,workout,Good workout,4
+481,water,32oz,3
+482,workout,Didn't workout,1
+483,workout,Workout was good,4
+484,workout,Good workout,4
+485,workout,Good workout,4
+486,stress,Handled,3
+487,water,32oz,3
+488,stress,Handled what wa thrown my way well,3
+489,workout,Didn't workout,1
+490,water,32oz,3
+491,workout,Good workout,4
+492,stress,Handled what was thrown at me,3
+493,sleep,8,4
+494,stress,Handled,3
+495,water,60,4
+496,workout,Workout was great,4
+497,workout,Great,4
+498,stress,Handled,3
+499,water,60,4
+500,water,100 oz,4
+501,workout,Great!,4
+502,stress,Handled,3
+503,water,80,4
+504,stress,amazing low,4
+505,water,60 oz,4
+506,stress,Not stressed,4
+507,water,100 oz,4
+508,water,gallon,4
+509,stress,Handled it well,3
+510,water,100 oz,4
+511,water,64 oz,4
+512,workout,Good workouts,4
+513,workout,good,4
+514,water,32,3
+515,workout,good,4
+516,workout,Didn't,1
+517,workout,good,4
+518,workout,Didn't,1
+519,workout,Didn't,1
+520,workout,good,4
+521,workout,good,4
+522,workout,Didn't workout,1
+523,workout,good,4
+524,workout,Great,4
+525,stress,Stress-free,4
+526,water,64oz,4
+527,water,64oz,4
+528,workout,Very good,4
+529,food,On point ,4
+530,water,48 oz,3
+531,workout,good,4
+532,workout,Didn't workout,1
+533,workout,Workout was good,4
+534,water,120 oz,4
+535,workout,Workout was good but hard,1
+536,stress,,1
+537,workout,Good workout,4
+538,workout,Workout was good,4
+539,water,48,3
+540,workout,good,4
+541,workout,Workout good,4
+542,workout,Good workout,4
+543,workout,Didn't workout,1
+544,workout,Good workout,4
+545,water,32,3
+546,workout,good,4
+547,water,32,3
+548,workout,good,4
+549,workout,good,4
+550,sleep,5,1
+551,workout,good,4
+552,sleep,5,1
+553,workout,good,4
+554,stress,Handle what was thrown at me,3
+555,water,32 oz,3
+556,workout,Good workout,4
+557,water,32,3
+558,stress,Handled what was thrown at me,3
+559,workout,Didn't work out,1
+560,stress,Handled what was thrown at me,3
+561,workout,Didn't workout,1
+562,water,32 oz,3
+563,workout,Didn't workout,1
+564,water,32 oz,3
+565,workout,Didn't workout,1
+566,water,32 oz,3
+567,workout,Didn't workout,1
+568,water,42 oz,3
+569,workout,good,4
+570,workout,Didnt,1
+571,workout,Didn’t workout,1
+572,food,Not good,1
+573,water,32 oz,3
+574,workout,good,4
+575,water,32,3
+576,workout,Great,4
+577,stress,Handled,3
+578,workout,good,4
+579,workout,Didn't workout,1
+580,water,32,3
+581,workout,good,4
+582,workout,Didn't workout,1
+583,workout,good,4
+584,stress,Stree free,4
+585,stress,Zero stress,4
+586,workout,good,4
+587,workout,Didn't workout,1
+588,workout,Didn't workout,1
+589,food,not good,1
+590,workout,good,4
+591,sleep,5,1
+592,workout,Didn't workout,1
+593,sleep,Less than 5 ,1
+594,workout,Didn't workout,1
+595,sleep,Less than 5,1
+596,workout,Didn't workout,1
+597,stress,Handled,3
+598,sleep,Less than 5,1
+599,workout,Didn't workout,1
+600,workout,good,4
+601,workout,good,4
+602,workout,good,4
+603,stress,Handled,3
+604,workout,Didn't workout,1
+605,stress,Handled,3
+606,workout,good,4
+607,sleep,6,2
+608,sleep,6,2
+609,workout,good,4
+610,stress,Overwhelmed,2
+611,food,On point,4
+612,workout,Didn't workout,1
+613,workout,good,4
+614,stress,stressed,2
+615,workout,Great.,4
+616,workout,good,4
+617,workout,Didn't workout,1
+618,workout,Didn't workout,1
+619,workout,Great,4
+620,water,32oz,3
+621,water,64oz,4
+622,water,64 oz,4
+623,stress,Handled what was thrown,3
+624,water,64 oz,4
+625,food,clean,3
+626,water,64oz,4
+627,water,64oz,4
+628,stress,Handled it,3
+629,food,ate like a pig,1
+630,stress,No value,3
+631,sleep,like none,1
+632,stress,overwhelming,1
+633,workout,Crossfit,4
+634,water,60,3
+635,workout,off day,1
+636,workout,good,4
+637,workout,romwod and Crossfit,4
+638,food,fine,3
+639,workout,Good workout,4
+640,stress,Handled what was thrown,3
+641,workout,Good workout,4
+642,workout,Didn't,1
+643,workout,good,4
+644,stress,Handled what was thrown,3
+645,food,fuck me,1
+646,stress,Handled what was thrown,3
+647,stress,Handled what was thrown,3
+648,stress,Handled it,3
+649,workout,it was ok,4
+650,workout,didn't workout,1
+651,food,On point ,4
+652,water,drank lots of water,4
+653,sleep,6,2
+654,sleep,8,4
+655,workout,good,4
+656,sleep,8,4
+657,stress,handled,3
+658,workout,didn't workout,1
+659,stress,handled,3
+660,sleep,8,4
+661,water,32,3
+662,stress,handled,3
+663,sleep,6.5,2
+664,workout,didnt workout.  PT,1
+665,stress,handled stress shitty,1
+666,workout,Didn't wotkout,1
+667,sleep,less than 5,1
+668,stress,overwhelming but fighting back,3
+669,workout,got back to the gym,3
+670,stress,too much,1
+671,sleep,less than 5,1
+672,stress,overwhelming,1
+673,sleep,less than 5,1
+674,workout,Workout was good,4
+675,sleep,7.5,3
+676,sleep,6.75,2
+677,workout,didn't,1
+678,stress,handled well,3
+679,workout,didn't,1
+680,water,32,2
+681,workout,didn't,1
+682,food,awful,1
+683,stress,Im ok today,3
+684,workout,off day,1
+685,stress,fine,3
+686,stress,stress is rough,1
+687,stress,handled it well,3
+688,sleep,i got 8,4
+689,stress,im good,4
+690,workout,awesome,4
+691,stress,Handled it,3
